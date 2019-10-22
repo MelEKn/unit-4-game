@@ -7,6 +7,8 @@ $("#number-to-match").html(numToMatch);
 
 var crystalNums = [];
 var totalScore = 0;
+var totalWins = 0;
+var totalLosses = 0;
 
 //assign random values between 1 and 12 to each of the crystals
 for (var i = 0; i < 4; i++) {
@@ -37,6 +39,19 @@ crystalImg.on("click", function() {
     //sends the total score to the html
     $("#total-score").html(totalScore);
     
+    //user wins if the totalScore is equal to numToMatch
+
+    if(totalScore == numToMatch){
+        alert("You won!");
+        totalWins++;
+        $("#wins").html(totalWins);
+    }
+    //user loses if totalScore goes over numToMatch
+    else if (totalScore >= numToMatch){
+        alert("You lost!");
+        totalLosses++;
+        $("#losses").html(totalLosses);
+    }
 
 
 })
