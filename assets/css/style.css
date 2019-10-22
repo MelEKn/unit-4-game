@@ -1,0 +1,11 @@
+.crystal{
+    width: 200px;
+    float: left;
+    
+}
+
+.container{
+    overflow: auto;
+    background-color: #cccccc;
+    width: 740px;
+}
